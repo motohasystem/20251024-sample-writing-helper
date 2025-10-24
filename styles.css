@@ -1,0 +1,468 @@
+/* 全体のスタイル */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    overflow: hidden;
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "main aside"
+        "nav aside"
+        "actions aside";
+    grid-template-columns: 1fr 400px;
+    grid-template-rows: auto 1fr auto auto;
+    min-height: 90vh;
+}
+
+/* ヘッダー */
+header {
+    grid-area: header;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+}
+
+header h1 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* ステップインジケーター */
+.step-indicator {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.step-indicator::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    right: 40px;
+    height: 2px;
+    background: rgba(255,255,255,0.3);
+    z-index: 0;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 8px;
+    transition: all 0.3s;
+}
+
+.step.active .step-number,
+.step.completed .step-number {
+    background: white;
+    color: #667eea;
+    transform: scale(1.1);
+}
+
+.step-label {
+    font-size: 12px;
+    text-align: center;
+    opacity: 0.8;
+}
+
+.step.active .step-label {
+    opacity: 1;
+    font-weight: bold;
+}
+
+/* メインコンテンツ */
+main {
+    grid-area: main;
+    padding: 40px;
+    overflow-y: auto;
+    max-height: calc(90vh - 250px);
+}
+
+.form-section {
+    display: none;
+}
+
+.form-section.active {
+    display: block;
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-section h2 {
+    color: #667eea;
+    margin-bottom: 30px;
+    font-size: 24px;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 10px;
+}
+
+/* フォームグループ */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
+}
+
+.required {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="number"],
+.form-group input[type="date"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-group select:disabled {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+}
+
+.hint {
+    font-size: 13px;
+    color: #666;
+    margin-top: 6px;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+/* ナビゲーションボタン */
+.navigation {
+    grid-area: nav;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    border-top: 1px solid #eee;
+}
+
+/* アクションボタン */
+.actions {
+    grid-area: actions;
+    padding: 20px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-top: 1px solid #eee;
+    background: #f8f9fa;
+}
+
+/* ボタンスタイル */
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    flex: 1;
+    min-width: 120px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-primary {
+    background: #667eea;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #5568d3;
+}
+
+.btn-secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #5a6268;
+}
+
+.btn-success {
+    background: #28a745;
+    color: white;
+}
+
+.btn-success:hover {
+    background: #218838;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* サイドバー（ライブプレビュー） */
+.live-preview {
+    grid-area: aside;
+    background: #f8f9fa;
+    padding: 30px;
+    border-left: 1px solid #ddd;
+    overflow-y: auto;
+    max-height: calc(90vh - 60px);
+}
+
+.live-preview h3 {
+    color: #667eea;
+    margin-bottom: 20px;
+    font-size: 18px;
+    position: sticky;
+    top: 0;
+    background: #f8f9fa;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #667eea;
+}
+
+/* Markdownプレビュー */
+.markdown-preview {
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.preview-container {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.markdown-preview h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 10px;
+}
+
+.markdown-preview h2 {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #444;
+    border-left: 4px solid #667eea;
+    padding-left: 12px;
+}
+
+.markdown-preview h3 {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    color: #555;
+}
+
+.markdown-preview p {
+    margin-bottom: 12px;
+}
+
+.markdown-preview ul,
+.markdown-preview ol {
+    margin-left: 25px;
+    margin-bottom: 12px;
+}
+
+.markdown-preview li {
+    margin-bottom: 6px;
+}
+
+.markdown-preview strong {
+    color: #333;
+    font-weight: 700;
+}
+
+.markdown-preview em {
+    color: #666;
+}
+
+.markdown-preview code {
+    background: #f4f4f4;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 1200px) {
+    .container {
+        grid-template-areas:
+            "header"
+            "main"
+            "aside"
+            "nav"
+            "actions";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto;
+    }
+
+    .live-preview {
+        max-height: 400px;
+        border-left: none;
+        border-top: 1px solid #ddd;
+    }
+
+    main {
+        max-height: none;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    .step-indicator {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .step-indicator::before {
+        display: none;
+    }
+
+    .step {
+        flex: 1 0 calc(25% - 15px);
+        min-width: 60px;
+    }
+
+    .step-label {
+        font-size: 10px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .navigation,
+    .actions {
+        padding: 15px 20px;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .live-preview {
+        padding: 20px;
+    }
+}
+
+/* プレビューセクション特有のスタイル */
+.form-section[data-section="6"] .preview-container {
+    min-height: 500px;
+}
+
+/* スクロールバーのスタイル */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地域おこし協力隊 募集文章作成ヘルパー</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>地域おこし協力隊 募集文章作成ヘルパー</h1>
+            <div class="step-indicator">
+                <div class="step active" data-step="0">
+                    <span class="step-number">1</span>
+                    <span class="step-label">自治体選択</span>
+                </div>
+                <div class="step" data-step="1">
+                    <span class="step-number">2</span>
+                    <span class="step-label">地域情報</span>
+                </div>
+                <div class="step" data-step="2">
+                    <span class="step-number">3</span>
+                    <span class="step-label">募集詳細</span>
+                </div>
+                <div class="step" data-step="3">
+                    <span class="step-number">4</span>
+                    <span class="step-label">応募条件</span>
+                </div>
+                <div class="step" data-step="4">
+                    <span class="step-number">5</span>
+                    <span class="step-label">待遇・条件</span>
+                </div>
+                <div class="step" data-step="5">
+                    <span class="step-number">6</span>
+                    <span class="step-label">応募情報</span>
+                </div>
+                <div class="step" data-step="6">
+                    <span class="step-number">7</span>
+                    <span class="step-label">プレビュー</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="form-section active" data-section="0">
+                <h2>自治体選択</h2>
+                <div class="form-group">
+                    <label for="prefecture">都道府県 <span class="required">*</span></label>
+                    <select id="prefecture" required>
+                        <option value="">選択してください</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="municipality">市区町村 <span class="required">*</span></label>
+                    <select id="municipality" required disabled>
+                        <option value="">まず都道府県を選択してください</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-section" data-section="1">
+                <h2>地域情報</h2>
+                <div class="form-group">
+                    <label for="region-name">地域名称（任意）</label>
+                    <input type="text" id="region-name" placeholder="例: ○○地区、△△エリア">
+                    <p class="hint">特定の地区やエリアを指定する場合に記入してください。</p>
+                </div>
+                <div class="form-group">
+                    <label for="region-features">地域の特徴・魅力</label>
+                    <textarea id="region-features" rows="6" placeholder="例: 豊かな自然に囲まれた山間部で、四季折々の美しい景色が楽しめます。農業が盛んで、特に○○の生産が有名です。"></textarea>
+                    <p class="hint">地域の自然、文化、産業、生活環境などの魅力を具体的に記述してください。応募者がその地域で働くイメージを持てるように書きましょう。</p>
+                </div>
+                <div class="form-group">
+                    <label for="region-challenges">地域の課題</label>
+                    <textarea id="region-challenges" rows="4" placeholder="例: 人口減少と高齢化が進んでおり、地域の活性化と若い世代の移住促進が課題となっています。"></textarea>
+                    <p class="hint">地域が抱える課題を正直に記述することで、協力隊員の役割が明確になります。</p>
+                </div>
+            </div>
+
+            <div class="form-section" data-section="2">
+                <h2>募集詳細</h2>
+                <div class="form-group">
+                    <label for="recruitment-number">募集人数</label>
+                    <input type="number" id="recruitment-number" min="1" placeholder="1">
+                    <p class="hint">募集する協力隊員の人数を記入してください。</p>
+                </div>
+                <div class="form-group">
+                    <label for="recruitment-background">募集背景</label>
+                    <textarea id="recruitment-background" rows="4" placeholder="例: 地域の観光資源を活かした地域活性化を推進するため、新たな視点とアイデアを持つ人材を求めています。"></textarea>
+                    <p class="hint">なぜこの募集を行うのか、背景や目的を説明してください。</p>
+                </div>
+                <div class="form-group">
+                    <label for="mission">活動内容・ミッション</label>
+                    <textarea id="mission" rows="8" placeholder="例:&#10;・地域の観光資源の発掘と情報発信&#10;・SNSやWebサイトを活用した観光PR&#10;・地域イベントの企画・運営サポート&#10;・地域住民との協働による地域活性化プロジェクトの推進"></textarea>
+                    <p class="hint">協力隊員が担当する具体的な活動内容を箇条書きで記述してください。明確に書くことで、応募者とのミスマッチを防げます。</p>
+                </div>
+                <div class="form-group">
+                    <label for="activity-support">活動サポート体制</label>
+                    <textarea id="activity-support" rows="4" placeholder="例: 担当職員が定期的に活動をサポートし、月1回のミーティングで進捗確認を行います。先輩協力隊員との交流の機会もあります。"></textarea>
+                    <p class="hint">協力隊員へのサポート体制があれば記述してください。</p>
+                </div>
+            </div>
+
+            <div class="form-section" data-section="3">
+                <h2>応募条件</h2>
+                <div class="form-group">
+                    <label for="age-requirement">年齢条件</label>
+                    <input type="text" id="age-requirement" placeholder="例: 20歳～45歳（応募時点）">
+                    <p class="hint">地域おこし協力隊の年齢制限を記入してください。一般的には20～45歳程度です。</p>
+                </div>
+                <div class="form-group">
+                    <label for="residence-requirement">居住要件</label>
+                    <textarea id="residence-requirement" rows="3" placeholder="例: 三大都市圏（東京圏・大阪圏・名古屋圏）に在住し、採用後に当該地域に住民票を移動できる方"></textarea>
+                    <p class="hint">総務省の地域おこし協力隊制度では、都市地域からの移住が条件となります。</p>
+                </div>
+                <div class="form-group">
+                    <label for="required-skills">必須スキル・経験</label>
+                    <textarea id="required-skills" rows="4" placeholder="例:&#10;・普通自動車運転免許（AT限定可）&#10;・基本的なパソコン操作（Word、Excel、インターネット）"></textarea>
+                    <p class="hint">応募に必須のスキルや経験があれば記入してください。</p>
+                </div>
+                <div class="form-group">
+                    <label for="preferred-skills">歓迎するスキル・経験</label>
+                    <textarea id="preferred-skills" rows="4" placeholder="例:&#10;・SNS運用やWebサイト制作の経験&#10;・イベント企画・運営の経験&#10;・地域づくりや地域活性化への関心"></textarea>
+                    <p class="hint">あると望ましいスキルや経験を記入してください。</p>
+                </div>
+                <div class="form-group">
+                    <label for="desired-personality">求める人物像</label>
+                    <textarea id="desired-personality" rows="4" placeholder="例: 地域住民と積極的にコミュニケーションを取り、地域に溶け込んで活動できる方。新しいことにチャレンジする意欲のある方。"></textarea>
+                    <p class="hint">どのような人柄や姿勢を持つ人を求めているか記述してください。</p>
+                </div>
+            </div>
+
+            <div class="form-section" data-section="4">
+                <h2>待遇・条件</h2>
+                <div class="form-group">
+                    <label for="employment-status">雇用形態</label>
+                    <select id="employment-status">
+                        <option value="">選択してください</option>
+                        <option value="委嘱">委嘱</option>
+                        <option value="会計年度任用職員">会計年度任用職員</option>
+                        <option value="その他">その他</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="salary">報酬・給与</label>
+                    <input type="text" id="salary" placeholder="例: 月額200,000円">
+                    <p class="hint">月額報酬または給与の金額を記入してください。</p>
+                </div>
+                <div class="form-group">
+                    <label for="contract-period">任期</label>
+                    <input type="text" id="contract-period" placeholder="例: 1年間（最長3年まで更新可能）">
+                    <p class="hint">契約期間と更新の可否を記入してください。</p>
+                </div>
+                <div class="form-group">
+                    <label for="working-hours">勤務時間</label>
+                    <input type="text" id="working-hours" placeholder="例: 週5日、1日8時間（9:00～18:00）">
+                </div>
+                <div class="form-group">
+                    <label for="holidays">休日</label>
+                    <input type="text" id="holidays" placeholder="例: 土日祝日、年末年始（活動内容により変動あり）">
+                </div>
+                <div class="form-group">
+                    <label for="insurance">社会保険</label>
+                    <input type="text" id="insurance" placeholder="例: 健康保険、厚生年金、雇用保険、労災保険加入">
+                </div>
+                <div class="form-group">
+                    <label for="housing">住居</label>
+                    <textarea id="housing" rows="3" placeholder="例: 町が用意する住宅を提供（家賃：月額20,000円、光熱費は自己負担）"></textarea>
+                    <p class="hint">住居の提供や補助がある場合は記入してください。</p>
+                </div>
+                <div class="form-group">
+                    <label for="vehicle">車両</label>
+                    <input type="text" id="vehicle" placeholder="例: 活動用車両貸与（ガソリン代は町が負担）">
+                    <p class="hint">活動用車両の提供がある場合は記入してください。</p>
+                </div>
+                <div class="form-group">
+                    <label for="other-benefits">その他待遇</label>
+                    <textarea id="other-benefits" rows="3" placeholder="例: 活動費として月額50,000円支給、パソコン貸与"></textarea>
+                </div>
+            </div>
+
+            <div class="form-section" data-section="5">
+                <h2>応募情報</h2>
+                <div class="form-group">
+                    <label for="application-deadline">応募締切</label>
+                    <input type="date" id="application-deadline">
+                    <p class="hint">応募の締切日を設定してください。</p>
+                </div>
+                <div class="form-group">
+                    <label for="application-method">応募方法</label>
+                    <textarea id="application-method" rows="4" placeholder="例: 必要書類を郵送またはメールで提出してください。&#10;【郵送先】〒000-0000 ○○県○○市○○町1-1 ○○課 地域おこし協力隊担当宛&#10;【メール】chiikiokoshi@example.jp"></textarea>
+                    <p class="hint">応募書類の提出方法を具体的に記述してください。</p>
+                </div>
+                <div class="form-group">
+                    <label for="required-documents">必要書類</label>
+                    <textarea id="required-documents" rows="5" placeholder="例:&#10;1. 履歴書（写真貼付）&#10;2. 職務経歴書&#10;3. 応募動機書（800字程度）&#10;4. 住民票（3ヶ月以内に発行されたもの）"></textarea>
+                    <p class="hint">応募に必要な書類を箇条書きで記述してください。</p>
+                </div>
+                <div class="form-group">
+                    <label for="selection-process">選考プロセス</label>
+                    <textarea id="selection-process" rows="5" placeholder="例:&#10;1. 書類選考（○月○日頃結果通知）&#10;2. 一次面接（○月中旬予定）&#10;3. 最終面接（○月下旬予定）&#10;※選考結果は各段階で個別に通知します。"></textarea>
+                    <p class="hint">選考の流れとスケジュールを記述してください。</p>
+                </div>
+                <div class="form-group">
+                    <label for="contact-department">問い合わせ先</label>
+                    <input type="text" id="contact-department" placeholder="例: ○○市 ○○課 地域振興係">
+                </div>
+                <div class="form-group">
+                    <label for="contact-person">担当者名</label>
+                    <input type="text" id="contact-person" placeholder="例: 山田太郎">
+                </div>
+                <div class="form-group">
+                    <label for="contact-phone">電話番号</label>
+                    <input type="tel" id="contact-phone" placeholder="例: 000-000-0000">
+                </div>
+                <div class="form-group">
+                    <label for="contact-email">メールアドレス</label>
+                    <input type="email" id="contact-email" placeholder="例: info@example.jp">
+                </div>
+                <div class="form-group">
+                    <label for="additional-notes">その他注意事項</label>
+                    <textarea id="additional-notes" rows="4" placeholder="例:&#10;・面接の交通費は自己負担となります。&#10;・提出書類は返却いたしません。&#10;・選考に関する問い合わせは受け付けておりません。"></textarea>
+                </div>
+            </div>
+
+            <div class="form-section" data-section="6">
+                <h2>プレビュー</h2>
+                <div class="preview-container">
+                    <div id="markdown-preview" class="markdown-preview"></div>
+                </div>
+            </div>
+        </main>
+
+        <div class="navigation">
+            <button id="btn-prev" class="btn btn-secondary">前へ</button>
+            <button id="btn-next" class="btn btn-primary">次へ</button>
+            <button id="btn-finish" class="btn btn-success" style="display:none;">完了</button>
+        </div>
+
+        <div class="actions">
+            <button id="btn-save" class="btn btn-secondary">JSONで保存</button>
+            <button id="btn-load" class="btn btn-secondary">JSONから読み込み</button>
+            <button id="btn-export-md" class="btn btn-primary">Markdownをダウンロード</button>
+            <button id="btn-copy-md" class="btn btn-secondary">Markdownをコピー</button>
+        </div>
+
+        <aside class="live-preview">
+            <h3>リアルタイムプレビュー</h3>
+            <div id="live-preview-content" class="markdown-preview"></div>
+        </aside>
+    </div>
+
+    <input type="file" id="file-input" accept=".json" style="display:none;">
+
+    <script src="prefectures.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
