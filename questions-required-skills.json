@@ -1,0 +1,29 @@
+{
+  "textarea_id": "required-skills",
+  "title": "必須スキル・経験を入力",
+  "target_length": "80-120",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "必須の資格はありますか？",
+      "placeholder": "例: 普通自動車運転免許",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "q2",
+      "text": "必須のパソコンスキルは？",
+      "placeholder": "例: Word・Excel基本操作、メール・インターネット",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "q3",
+      "text": "その他必須の能力・経験は？",
+      "placeholder": "例: コミュニケーション能力、チームワーク",
+      "type": "text",
+      "required": false
+    }
+  ],
+  "prompt_template": "以下の情報から、必須スキル・経験を{{target_length}}文字程度で箇条書きでまとめてください：\n必須資格: {{q1}}\nPCスキル: {{q2}}\nその他: {{q3}}"
+}

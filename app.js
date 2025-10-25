@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeNavigation();
     initializeActions();
     initializeFormListeners();
+    initializeAIWidget();
     updateStepDisplay();
     updateLivePreview();
 });
@@ -507,5 +508,44 @@ function copyMarkdown() {
         document.execCommand('copy');
         document.body.removeChild(textarea);
         alert('Markdownをクリップボードにコピーしました。');
+    });
+}
+
+// AI入力サポートウィジェットの初期化
+function initializeAIWidget() {
+    // AIWidgetが利用可能かチェック
+    if (typeof AIWidget === 'undefined') {
+        console.warn('AIWidgetが読み込まれていません');
+        return;
+    }
+
+    // textareaとそれに対応する質問ファイルのマッピング
+    const widgetConfig = {
+        'region-features': 'questions-region-features.json',
+        'region-challenges': 'questions-region-challenges.json',
+        'recruitment-background': 'questions-recruitment-background.json',
+        'mission': 'questions-mission.json',
+        'activity-support': 'questions-activity-support.json',
+        'residence-requirement': 'questions-residence-requirement.json',
+        'required-skills': 'questions-required-skills.json',
+        'preferred-skills': 'questions-preferred-skills.json',
+        'desired-personality': 'questions-desired-personality.json',
+        'housing': 'questions-housing.json',
+        'other-benefits': 'questions-other-benefits.json',
+        'application-method': 'questions-application-method.json',
+        'required-documents': 'questions-required-documents.json',
+        'selection-process': 'questions-selection-process.json',
+        'additional-notes': 'questions-additional-notes.json'
+    };
+
+    // 各textareaにウィジェットを初期化
+    Object.keys(widgetConfig).forEach(textareaId => {
+        const questionFile = widgetConfig[textareaId];
+        try {
+            AIWidget.init(textareaId, questionFile);
+            console.log(`AI入力サポートウィジェットを初期化: ${textareaId}`);
+        } catch (error) {
+            console.error(`ウィジェット初期化エラー (${textareaId}):`, error);
+        }
     });
 }

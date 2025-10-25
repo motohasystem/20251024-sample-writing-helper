@@ -1,0 +1,29 @@
+{
+  "textarea_id": "application-method",
+  "title": "応募方法を入力",
+  "target_length": "100-150",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "応募書類の提出方法は？",
+      "placeholder": "例: 郵送、メール、持参",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "q2",
+      "text": "郵送先またはメールアドレスは？",
+      "placeholder": "例: 〒000-0000 ○○市○○町1-1、chiiki@example.jp",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "q3",
+      "text": "応募時の注意事項は？",
+      "placeholder": "例: 封筒に「地域おこし協力隊応募」と明記",
+      "type": "text",
+      "required": false
+    }
+  ],
+  "prompt_template": "以下の情報から、応募方法を{{target_length}}文字程度でまとめてください：\n提出方法: {{q1}}\n提出先: {{q2}}\n注意事項: {{q3}}"
+}

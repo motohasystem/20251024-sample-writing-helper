@@ -1,0 +1,36 @@
+{
+  "textarea_id": "region-challenges",
+  "title": "地域の課題を入力",
+  "target_length": "100-150",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "人口・高齢化に関する課題は？",
+      "placeholder": "例: 人口減少、高齢化率の上昇、若者流出",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "q2",
+      "text": "産業・経済面での課題は？",
+      "placeholder": "例: 担い手不足、後継者問題、雇用機会の減少",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "q3",
+      "text": "生活インフラ・サービスの課題は？",
+      "placeholder": "例: 公共交通の減少、商店の閉店、医療・教育施設の不足",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "q4",
+      "text": "地域コミュニティの課題は？",
+      "placeholder": "例: 地域活動の担い手不足、伝統行事の継承困難",
+      "type": "text",
+      "required": false
+    }
+  ],
+  "prompt_template": "以下の情報から、地域の課題を{{target_length}}文字程度でまとめてください：\n人口・高齢化: {{q1}}\n産業・経済: {{q2}}\n生活インフラ: {{q3}}\nコミュニティ: {{q4}}"
+}

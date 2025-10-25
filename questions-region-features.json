@@ -1,0 +1,43 @@
+{
+  "textarea_id": "region-features",
+  "title": "地域の特徴・魅力を入力",
+  "target_length": "150-200",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "地域の自然環境の特徴は？",
+      "placeholder": "例: 豊かな森林、美しい海岸線、清流",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "q2",
+      "text": "地域の主要な産業は？",
+      "placeholder": "例: 農業、林業、観光業、伝統工芸",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "q3",
+      "text": "地域の文化や伝統の特色は？",
+      "placeholder": "例: 祭り、郷土料理、伝統芸能",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "q4",
+      "text": "住民の特徴や雰囲気は？",
+      "placeholder": "例: 温かく親切、地域活動が盛ん",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "q5",
+      "text": "アクセス・交通の特徴は？",
+      "placeholder": "例: 都市部から車で1時間、鉄道駅あり",
+      "type": "text",
+      "required": false
+    }
+  ],
+  "prompt_template": "以下の情報から、地域の特徴・魅力を{{target_length}}文字程度でまとめてください：\n自然環境: {{q1}}\n主要産業: {{q2}}\n文化・伝統: {{q3}}\n住民の特徴: {{q4}}\nアクセス: {{q5}}"
+}

@@ -1,0 +1,36 @@
+{
+  "textarea_id": "additional-notes",
+  "title": "その他注意事項を入力",
+  "target_length": "80-120",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "交通費等の負担について",
+      "placeholder": "例: 面接の交通費は自己負担",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "q2",
+      "text": "提出書類について",
+      "placeholder": "例: 提出書類は返却しません",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "q3",
+      "text": "問い合わせについて",
+      "placeholder": "例: 選考に関する問い合わせは受け付けません",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "q4",
+      "text": "その他の注意事項",
+      "placeholder": "例: 採用後研修あり、試用期間あり",
+      "type": "text",
+      "required": false
+    }
+  ],
+  "prompt_template": "以下の情報から、その他注意事項を{{target_length}}文字程度で箇条書きでまとめてください：\n交通費: {{q1}}\n提出書類: {{q2}}\n問い合わせ: {{q3}}\nその他: {{q4}}"
+}

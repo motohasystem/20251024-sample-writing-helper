@@ -1,0 +1,29 @@
+{
+  "textarea_id": "recruitment-background",
+  "title": "募集背景を入力",
+  "target_length": "100-150",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "なぜこの募集を行うのか？",
+      "placeholder": "例: 地域活性化の推進、新たな視点の導入",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "q2",
+      "text": "解決したい課題は何か？",
+      "placeholder": "例: 情報発信力の強化、移住促進、観光振興",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "q3",
+      "text": "協力隊員に期待することは？",
+      "placeholder": "例: 外部視点、専門スキル、熱意",
+      "type": "text",
+      "required": false
+    }
+  ],
+  "prompt_template": "以下の情報から、募集背景を{{target_length}}文字程度でまとめてください：\n募集理由: {{q1}}\n解決課題: {{q2}}\n期待すること: {{q3}}"
+}

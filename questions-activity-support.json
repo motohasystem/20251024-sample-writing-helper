@@ -1,0 +1,29 @@
+{
+  "textarea_id": "activity-support",
+  "title": "活動サポート体制を入力",
+  "target_length": "100-150",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "担当部署・担当者のサポート体制は？",
+      "placeholder": "例: 専任担当職員の配置、定期ミーティング",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "q2",
+      "text": "先輩協力隊員や地域との交流機会は？",
+      "placeholder": "例: 先輩隊員との交流会、地域住民との定期交流",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "q3",
+      "text": "研修・スキルアップの機会は？",
+      "placeholder": "例: 県主催の研修会、スキルアップ研修への参加支援",
+      "type": "text",
+      "required": false
+    }
+  ],
+  "prompt_template": "以下の情報から、活動サポート体制を{{target_length}}文字程度でまとめてください：\n担当サポート: {{q1}}\n交流機会: {{q2}}\n研修機会: {{q3}}"
+}

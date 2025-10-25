@@ -1,0 +1,29 @@
+{
+  "textarea_id": "residence-requirement",
+  "title": "居住要件を入力",
+  "target_length": "80-120",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "どの地域からの移住を想定していますか？",
+      "placeholder": "例: 三大都市圏、都市地域全般",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "q2",
+      "text": "住民票の移動は必須ですか？",
+      "placeholder": "例: 採用後に移動必須、着任時に移動",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "q3",
+      "text": "その他の居住条件はありますか？",
+      "placeholder": "例: 期間中は地域内に居住、活動終了後の定住希望",
+      "type": "text",
+      "required": false
+    }
+  ],
+  "prompt_template": "以下の情報から、居住要件を{{target_length}}文字程度でまとめてください：\n移住元: {{q1}}\n住民票: {{q2}}\nその他条件: {{q3}}"
+}

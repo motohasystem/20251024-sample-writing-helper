@@ -1,0 +1,36 @@
+{
+  "textarea_id": "required-documents",
+  "title": "必要書類を入力",
+  "target_length": "100-150",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "履歴書は必要ですか？",
+      "placeholder": "例: 写真貼付の履歴書、指定様式あり",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "q2",
+      "text": "職務経歴書は必要ですか？",
+      "placeholder": "例: 必要、書式自由",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "q3",
+      "text": "応募動機書等は必要ですか？",
+      "placeholder": "例: 800字程度の応募動機書",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "q4",
+      "text": "その他の必要書類は？",
+      "placeholder": "例: 住民票、資格証明書のコピー",
+      "type": "text",
+      "required": false
+    }
+  ],
+  "prompt_template": "以下の情報から、必要書類を{{target_length}}文字程度で箇条書きでまとめてください：\n履歴書: {{q1}}\n職務経歴書: {{q2}}\n応募動機書: {{q3}}\nその他: {{q4}}"
+}

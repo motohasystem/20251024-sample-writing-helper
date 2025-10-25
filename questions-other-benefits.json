@@ -1,0 +1,29 @@
+{
+  "textarea_id": "other-benefits",
+  "title": "その他待遇を入力",
+  "target_length": "80-120",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "活動費の支給はありますか？",
+      "placeholder": "例: 月額50,000円、年間予算あり",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "q2",
+      "text": "機材・設備の貸与は？",
+      "placeholder": "例: パソコン貸与、カメラ貸与",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "q3",
+      "text": "その他の待遇・福利厚生は？",
+      "placeholder": "例: 引越し費用補助、資格取得支援",
+      "type": "text",
+      "required": false
+    }
+  ],
+  "prompt_template": "以下の情報から、その他待遇を{{target_length}}文字程度で箇条書きでまとめてください：\n活動費: {{q1}}\n機材貸与: {{q2}}\nその他: {{q3}}"
+}

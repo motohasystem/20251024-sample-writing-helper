@@ -1,0 +1,29 @@
+{
+  "textarea_id": "housing",
+  "title": "住居について入力",
+  "target_length": "80-120",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "住居は提供されますか？",
+      "placeholder": "例: 自治体が用意、民間賃貸を斡旋、自己手配",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "q2",
+      "text": "家賃の負担はどうなりますか？",
+      "placeholder": "例: 月額20,000円、全額自己負担、補助あり",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "q3",
+      "text": "光熱費等の負担は？",
+      "placeholder": "例: 自己負担、一部補助",
+      "type": "text",
+      "required": false
+    }
+  ],
+  "prompt_template": "以下の情報から、住居についてを{{target_length}}文字程度でまとめてください：\n住居提供: {{q1}}\n家賃: {{q2}}\n光熱費: {{q3}}"
+}

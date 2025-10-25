@@ -1,0 +1,36 @@
+{
+  "textarea_id": "selection-process",
+  "title": "選考プロセスを入力",
+  "target_length": "100-150",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "書類選考は行いますか？",
+      "placeholder": "例: 書類選考あり、結果は○月○日頃通知",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "q2",
+      "text": "面接の回数と予定時期は？",
+      "placeholder": "例: 一次面接（○月中旬）、最終面接（○月下旬）",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "q3",
+      "text": "筆記試験や実技試験はありますか？",
+      "placeholder": "例: 小論文あり、プレゼンテーション実施",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "q4",
+      "text": "結果通知の方法は？",
+      "placeholder": "例: 各段階で個別に通知、最終結果は書面通知",
+      "type": "text",
+      "required": false
+    }
+  ],
+  "prompt_template": "以下の情報から、選考プロセスを{{target_length}}文字程度で箇条書きでまとめてください：\n書類選考: {{q1}}\n面接: {{q2}}\n試験: {{q3}}\n結果通知: {{q4}}"
+}

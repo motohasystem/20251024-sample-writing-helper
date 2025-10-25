@@ -1,0 +1,36 @@
+{
+  "textarea_id": "desired-personality",
+  "title": "求める人物像を入力",
+  "target_length": "100-150",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "どのような性格の人が望ましいか？",
+      "placeholder": "例: 積極的、協調性がある、チャレンジ精神",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "q2",
+      "text": "重視するコミュニケーション能力は？",
+      "placeholder": "例: 傾聴力、発信力、調整力",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "q3",
+      "text": "地域への姿勢として期待することは？",
+      "placeholder": "例: 地域に溶け込む、長期的な関わり、新しい視点",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "q4",
+      "text": "仕事への取り組み方で重視する点は？",
+      "placeholder": "例: 主体性、柔軟性、計画性",
+      "type": "text",
+      "required": false
+    }
+  ],
+  "prompt_template": "以下の情報から、求める人物像を{{target_length}}文字程度でまとめてください：\n性格: {{q1}}\nコミュニケーション: {{q2}}\n地域への姿勢: {{q3}}\n仕事への取り組み: {{q4}}"
+}

@@ -1,0 +1,29 @@
+{
+  "textarea_id": "preferred-skills",
+  "title": "歓迎するスキル・経験を入力",
+  "target_length": "80-120",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "あると望ましいITスキルは？",
+      "placeholder": "例: SNS運用、Webサイト制作、動画編集",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "q2",
+      "text": "あると望ましい活動経験は？",
+      "placeholder": "例: イベント企画・運営、地域活動、ボランティア",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "q3",
+      "text": "あると望ましい専門知識は？",
+      "placeholder": "例: 観光、農業、デザイン、マーケティング",
+      "type": "text",
+      "required": false
+    }
+  ],
+  "prompt_template": "以下の情報から、歓迎するスキル・経験を{{target_length}}文字程度で箇条書きでまとめてください：\nITスキル: {{q1}}\n活動経験: {{q2}}\n専門知識: {{q3}}"
+}

@@ -1,0 +1,43 @@
+{
+  "textarea_id": "mission",
+  "title": "活動内容・ミッションを入力",
+  "target_length": "200-300",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "協力隊員に期待する主な活動は？",
+      "placeholder": "例: 観光PR、地域イベント企画、情報発信",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "q2",
+      "text": "どのような分野で活動してほしいか？",
+      "placeholder": "例: 観光振興、農業支援、移住促進",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "q3",
+      "text": "具体的に使用するツールや手段は？",
+      "placeholder": "例: SNS、Webサイト、イベント、ワークショップ",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "q4",
+      "text": "連携してほしい対象は？",
+      "placeholder": "例: 地域住民、地元企業、行政機関",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "q5",
+      "text": "最終的に達成してほしい目標は？",
+      "placeholder": "例: 観光客増加、移住者獲得、地域活性化",
+      "type": "text",
+      "required": false
+    }
+  ],
+  "prompt_template": "以下の情報から、活動内容・ミッションを{{target_length}}文字程度で箇条書きでまとめてください：\n主な活動: {{q1}}\n活動分野: {{q2}}\nツール・手段: {{q3}}\n連携対象: {{q4}}\n達成目標: {{q5}}"
+}
